@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>第三章 · 最终确认</title>
+  <style>
+:root{
+  --bg:#0b0f1a; --ink:#e6f0ff; --muted:#9fb0cc; --brand:#5fe1ff; --accent:#7f5af0; --card:#121826;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background: radial-gradient(1200px 600px at 10% -10%, #14203a, transparent),
+              radial-gradient(1200px 800px at 120% 10%, #241a43, transparent),
+              var(--bg);
+  color:var(--ink); line-height:1.7;
+}
+.header{
+  position:sticky; top:0; z-index:10;
+  backdrop-filter: blur(6px);
+  background: rgba(16,22,32,.6);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{
+  max-width:1000px; margin:0 auto; display:flex; gap:1rem; align-items:center; padding:12px 16px;
+}
+.nav a{ color:var(--ink); text-decoration:none; opacity:.9; padding:8px 12px; border-radius:12px; }
+.nav a:hover{ background:rgba(255,255,255,.06); opacity:1; }
+.brand{ font-weight:700; letter-spacing:.5px; color:var(--brand); }
+.main{ max-width:1000px; margin:40px auto; padding:0 16px; }
+h1,h2{ line-height:1.2; }
+h1{ font-size:clamp(28px, 4vw, 42px); margin:12px 0 8px; }
+h2{ font-size:clamp(20px, 3vw, 28px); margin:24px 0 8px; color:var(--brand); }
+p{ margin:12px 0; }
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+.footer{ color:var(--muted); font-size:14px; text-align:center; padding:40px 0; }
+.kicker{ color:var(--muted); text-transform:uppercase; letter-spacing:.16em; font-size:12px; }
+.meta{ color:var(--muted); font-size:14px; }
+hr{ border:none; border-top:1px dashed rgba(255,255,255,.15); margin:24px 0; }
+</style>
+</head>
+<body>
+  
+<div class="header">
+  <div class="nav">
+    <div class="brand">链上小说 · Web</div>
+    <a href="index.html">首页</a>
+    <a href="chapter1.html">第一章</a>
+    <a href="chapter2.html">第二章</a>
+    <a href="chapter3.html">第三章</a>
+  </div>
+</div>
+
+  <main class="main">
+    <article class="card">
+      <div class="kicker">第三章</div>
+      <h1>最终确认</h1>
+      <p>几个月后，城市升级了二层网络，交易像闪电一样落地，再定期打包回主链。街头小摊收款二维码后面，不再是传统支付网关，而是一条低费率的 L2 通道。</p>
+      <p>我受邀为跨链桥做代码审计。桥的本质很朴素：在 A 链锁定资产，在 B 链铸造映射凭证；回程时，销毁凭证并在 A 链解锁。但人性不朴素，托管、预言机、验证者集合，每一层都暗藏抽水的动机。</p>
+      <p>一位叫“雨季”的验证者悄悄给我发消息：“有人在合约里埋了 MEV 漏洞，机器人会在用户跨链时套利，把手续费抬到看不见的地方。”</p>
+      <p>我和他连夜修补，提交 PR。与此同时，黑客在论坛里公开了我们尚未合并的补丁，市场恐慌，桥上 TVL 断崖式下跌。两条链之间的高速路，一夜之间成了吊桥。</p>
+      <p>第二天清晨，全城广播请求用户把资产分散到多个通道，临时提高保险基金的赔付上限。危机像潮水，退去之后，桥还在，规则更清晰了。</p>
+      <p>那晚我把《边疆涅槃》的最后一章部署上链，写下结语：<i>“所谓最终确认，不是写在区块里的六个确认，而是写在人们的心里——当足够多的人愿意为同一条历史付费时，历史才会被保存。”</i></p>
+      <p>屏幕上的高度继续增长，像脉搏。城市没有变得更完美，但变得更可验证。师父说：“对，别神化技术，别鄙视人心。让它们在审计里相遇。”</p>
+      <hr/>
+      <h2>术语旁注</h2>
+      <ul>
+        <li><b>L2（二层）</b>：把交易搬到更快更便宜的层处理，再把结果提交回主链。</li>
+        <li><b>跨链桥</b>：在不同链间转移价值的机制，最常见的是锁定/铸造-销毁/解锁。</li>
+        <li><b>MEV</b>：矿工/验证者可提取价值；排序权力带来的额外利润与伦理考验。</li>
+        <li><b>最终确认（Finality）</b>：交易不可逆转的时刻，也可以理解为社会层面的共识沉淀。</li>
+      </ul>
+    </article>
+  </main>
+  <footer class="footer">第三章 · 最终确认</footer>
+</body>
+</html>

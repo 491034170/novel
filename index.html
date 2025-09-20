@@ -1,0 +1,79 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>链上小说 · 首页</title>
+  <style>
+:root{
+  --bg:#0b0f1a; --ink:#e6f0ff; --muted:#9fb0cc; --brand:#5fe1ff; --accent:#7f5af0; --card:#121826;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background: radial-gradient(1200px 600px at 10% -10%, #14203a, transparent),
+              radial-gradient(1200px 800px at 120% 10%, #241a43, transparent),
+              var(--bg);
+  color:var(--ink); line-height:1.7;
+}
+.header{
+  position:sticky; top:0; z-index:10;
+  backdrop-filter: blur(6px);
+  background: rgba(16,22,32,.6);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{
+  max-width:1000px; margin:0 auto; display:flex; gap:1rem; align-items:center; padding:12px 16px;
+}
+.nav a{ color:var(--ink); text-decoration:none; opacity:.9; padding:8px 12px; border-radius:12px; }
+.nav a:hover{ background:rgba(255,255,255,.06); opacity:1; }
+.brand{ font-weight:700; letter-spacing:.5px; color:var(--brand); }
+.main{ max-width:1000px; margin:40px auto; padding:0 16px; }
+h1,h2{ line-height:1.2; }
+h1{ font-size:clamp(28px, 4vw, 42px); margin:12px 0 8px; }
+h2{ font-size:clamp(20px, 3vw, 28px); margin:24px 0 8px; color:var(--brand); }
+p{ margin:12px 0; }
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+.footer{ color:var(--muted); font-size:14px; text-align:center; padding:40px 0; }
+.kicker{ color:var(--muted); text-transform:uppercase; letter-spacing:.16em; font-size:12px; }
+.meta{ color:var(--muted); font-size:14px; }
+hr{ border:none; border-top:1px dashed rgba(255,255,255,.15); margin:24px 0; }
+</style>
+</head>
+<body>
+  
+<div class="header">
+  <div class="nav">
+    <div class="brand">链上小说 · Web</div>
+    <a href="index.html">首页</a>
+    <a href="chapter1.html">第一章</a>
+    <a href="chapter2.html">第二章</a>
+    <a href="chapter3.html">第三章</a>
+  </div>
+</div>
+
+  <main class="main">
+    <section class="card">
+      <div class="kicker">原创科幻 · 区块链题材</div>
+      <h1>《最终确认 Finality》</h1>
+      <p class="meta">作者：你（王鑫）｜许可：可自由修改、分发（署名即可）</p>
+      <p>这是一个关于信任、共识与选择的故事。它不解释所有技术细节，但尽力把<strong>区块链</strong>的精神变成可感知的情节：公开账本像城市广场，节点像彼此不完全信任却必须协作的邻居，哈希是一句无法反悔的话，而最终确认，是我们集体做出的承诺。</p>
+      <hr/>
+      <h2>阅读顺序</h2>
+      <ol>
+        <li><a href="chapter1.html">第一章：创世区</a>（创世块、工作量证明、链上身份）</li>
+        <li><a href="chapter2.html">第二章：分叉之夜</a>（治理、DAO、硬分叉/软分叉）</li>
+        <li><a href="chapter3.html">第三章：最终确认</a>（跨链、MEV、L2、现实抉择）</li>
+      </ol>
+      <p>你可以把这个网站部署到 GitHub Pages、Vercel、Netlify 或任意静态托管；也可以把内容替换成你的作品集或课程作业。</p>
+    </section>
+  </main>
+  <footer class="footer">© 2025 链上小说示例站 · 用代码讲故事</footer>
+</body>
+</html>

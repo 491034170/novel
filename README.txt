@@ -1,0 +1,1 @@
+静态站点：把这整个文件夹上传到任意静态托管即可（GitHub Pages、Vercel、Netlify、本地打开也行）。如需改名，直接编辑各 HTML。

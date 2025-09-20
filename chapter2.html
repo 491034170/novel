@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>第二章 · 分叉之夜</title>
+  <style>
+:root{
+  --bg:#0b0f1a; --ink:#e6f0ff; --muted:#9fb0cc; --brand:#5fe1ff; --accent:#7f5af0; --card:#121826;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background: radial-gradient(1200px 600px at 10% -10%, #14203a, transparent),
+              radial-gradient(1200px 800px at 120% 10%, #241a43, transparent),
+              var(--bg);
+  color:var(--ink); line-height:1.7;
+}
+.header{
+  position:sticky; top:0; z-index:10;
+  backdrop-filter: blur(6px);
+  background: rgba(16,22,32,.6);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{
+  max-width:1000px; margin:0 auto; display:flex; gap:1rem; align-items:center; padding:12px 16px;
+}
+.nav a{ color:var(--ink); text-decoration:none; opacity:.9; padding:8px 12px; border-radius:12px; }
+.nav a:hover{ background:rgba(255,255,255,.06); opacity:1; }
+.brand{ font-weight:700; letter-spacing:.5px; color:var(--brand); }
+.main{ max-width:1000px; margin:40px auto; padding:0 16px; }
+h1,h2{ line-height:1.2; }
+h1{ font-size:clamp(28px, 4vw, 42px); margin:12px 0 8px; }
+h2{ font-size:clamp(20px, 3vw, 28px); margin:24px 0 8px; color:var(--brand); }
+p{ margin:12px 0; }
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+.footer{ color:var(--muted); font-size:14px; text-align:center; padding:40px 0; }
+.kicker{ color:var(--muted); text-transform:uppercase; letter-spacing:.16em; font-size:12px; }
+.meta{ color:var(--muted); font-size:14px; }
+hr{ border:none; border-top:1px dashed rgba(255,255,255,.15); margin:24px 0; }
+</style>
+</head>
+<body>
+  
+<div class="header">
+  <div class="nav">
+    <div class="brand">链上小说 · Web</div>
+    <a href="index.html">首页</a>
+    <a href="chapter1.html">第一章</a>
+    <a href="chapter2.html">第二章</a>
+    <a href="chapter3.html">第三章</a>
+  </div>
+</div>
+
+  <main class="main">
+    <article class="card">
+      <div class="kicker">第二章</div>
+      <h1>分叉之夜</h1>
+      <p>城市议事厅今晚不讨论停车费，而是讨论<b>治理</b>。某个著名 DAO 的国库被人利用合约漏洞抽走了，一半市民要求回滚史，另一半坚持“代码即法律”。</p>
+      <p>屏幕上出现两条预测线：A 线回滚、B 线不回滚。链像一棵树，正在长出两根枝。</p>
+      <p>师父说：“技术不是神，治理才是人。”多数派呼吁一次硬分叉，让旧链继续存在，新链把被盗资产标记为无效，再把国库恢复。</p>
+      <p>我站在人群边缘，看见每个节点头像旁都闪着不同的签名权重。有人代表大量质押，有人只握着几枚散碎的代币；不再是“一个人一票”，而是“一个代币一票”，也有人主张引入声誉与时间加权的混合方案。</p>
+      <p>午夜时分，决议通过。分叉像一场整齐的地震：历史从同一处裂开，生成两个版本。人群沸腾，交易所紧急暂停充提，开发者开始在两条平行世界里修同一个 bug。</p>
+      <p>我忽然想起自己的合约《边疆涅槃》。在 A 链里，它绑定了被回滚前的历史；在 B 链里，它保留了漏洞像伤疤一样的真实性。哪一个才是“正史”？</p>
+      <p>我给两条链都提交了新版本：附上复盘报告与治理提案，把漏洞当教材，把回滚当制度测试。我写道：<i>“当价值过于集中在单一合约时，技术债会被市场放大；请把国库分层、权限最小化、慢雾式多签、时间锁与审计预算写进宪法。”</i></p>
+      <hr/>
+      <h2>术语旁注</h2>
+      <ul>
+        <li><b>DAO</b>：去中心化自治组织，规则写入智能合约，预算链上公开。</li>
+        <li><b>硬分叉/软分叉</b>：是否需要老节点升级才能兼容新规则。</li>
+        <li><b>治理</b>：把技术决策变成公共程序的艺术。</li>
+      </ul>
+    </article>
+  </main>
+  <footer class="footer">第二章 · 分叉之夜</footer>
+</body>
+</html>
